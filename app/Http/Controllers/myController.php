@@ -26,4 +26,18 @@ class myController extends Controller
 
     }
 
+    function howManySeconds(){
+        
+        $d1 = new DateTime("1732-4-14 00:00:00");
+
+        $now=date();
+
+        $interval = $d1->diff($now);
+        
+        $diffInSeconds = $interval->s;
+        
+        return $diffInSeconds;
+
+    }
+
 }
